@@ -122,15 +122,18 @@ if (!token && (!state || state !== storedState)) {
   // Try to get a token.
   const scope = 'user-top-read';  
   const state = generateRandomString(8);
+  const redirect = window.location.href;
   const clientID = '2b6ec851a3484d53b10ff10a0ca3191d';
 
   localStorage.setItem(stateKey, state);
+
+  console.log('redirect uri: ' + redirect);
 
   const url = 'https://accounts.spotify.com/authorize'
     + `?response_type=token`
     + `&client_id=${encodeURIComponent(clientID)}`
     + `&scope=${encodeURIComponent(scope)}`
-    + `&redirect_uri=${encodeURIComponent(window.location.href + '/')}`
+    + `&redirect_uri=${encodeURIComponent(redirect)}`
     + `&state=${encodeURIComponent(state)}`
 
   // Redirect to spotify auth page.
