@@ -130,7 +130,7 @@ if (!token && (!state || state !== storedState)) {
     + `?response_type=token`
     + `&client_id=${encodeURIComponent(clientID)}`
     + `&scope=${encodeURIComponent(scope)}`
-    + `&redirect_uri=${encodeURIComponent(window.location.origin + '/')}`
+    + `&redirect_uri=${encodeURIComponent(window.location.href + '/')}`
     + `&state=${encodeURIComponent(state)}`
 
   // Redirect to spotify auth page.
