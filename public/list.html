@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="icon" 
+    type="image/png" 
+    href="https://www.scdn.co/i/_global/favicon.ico">
+
+	<style>
+    .container { max-width: 100%; }
+  </style>
+
+  <link rel="stylesheet" href="/topify/css/normalize.css">  
+  <link rel="stylesheet" href="/topify/css/skeleton.css">
+  <link rel="stylesheet" href="/topify/css/styles.css">
+
+	<title>Topify - list</title>
+</head>
+<body>
+
+  <div id="app" class="container">
+    <div class="row">
+      <div class="three columns">
+        <p><b>Top 50 tracks - short term.</b></p>
+        <ol>
+          <li v-for="track in tracks.short_term">
+            {{ track.name }} <small class="muted">{{ track.artists[0].name }}</small>
+          </li>
+        </ol>
+      </div>
+
+      <div class="three columns">
+        <p><b>Top 50 tracks - medium term.</b></p>
+        <ol>
+          <li v-for="track in tracks.medium_term">
+            {{ track.name }} <small class="muted">{{ track.artists[0].name }}</small>
+          </li>
+        </ol>
+      </div>
+
+      <div class="three columns">
+        <p><b>Top 50 artists - short term.</b></p>
+        <ol>
+          <li v-for="artist in artists.short_term">
+            {{ artist.name }}
+          </li>
+        </ol>
+      </div>
+
+      <div class="three columns">
+        <p><b>Top 50 artist - medium term.</b></p>
+        <ol>
+          <li v-for="artist in artists.medium_term">
+            {{ artist.name }}
+          </li>
+        </ol>
+      </div>
+
+      <div class="three columns">
+        <p><b>Top 50 tracks - long term.</b></p>
+        <ol>
+          <li v-for="track in tracks.long_term">
+            {{ track.name }} <small class="muted">{{ track.artists[0].name }}</small>
+          </li>
+        </ol>
+      </div>
+
+      <div class="three columns">
+        <p><b>Top 50 artist - long term.</b></p>
+        <ol>
+          <li v-for="artist in artists.long_term">
+            {{ artist.name }}
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <script src="/topify/js/spotify.js"></script>  
+  <script src="/topify/js/vue.js"></script>
+  <script src="/topify/list.js"></script>
+
+</body>
+
+</html>
