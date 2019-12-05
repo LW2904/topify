@@ -89,7 +89,7 @@ if (!token && (!state || state !== storedState)) {
   const scope = 'user-top-read';  
   const state = generateRandomString(8);
   const redirect = window.location.href;
-  const clientID = '2b6ec851a3484d53b10ff10a0ca3191d';
+  const clientID = '7eb4d057414b443dba90d04c3bd46736';
 
   localStorage.setItem(stateKey, state);
 
